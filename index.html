@@ -26,9 +26,28 @@
     <link rel="canonical" href="https://bestresortskanha.com">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     
-    <!-- Styles -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C5530',
+                        secondary: '#8B7355',
+                        accent: '#E6B17E',
+                        background: '#FDFBF7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     
     <!-- Google Analytics -->
@@ -83,20 +102,36 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="https://images.unsplash.com/photo-1585016495481-91613a3ab1bc" alt="Kanha National Park landscape" class="hero-image">
-        <div class="hero-content">
-            <h1>Top 10 Resorts in Kanha National Park (Khatia Gate)</h1>
-            <p>Your ultimate guide to luxury stays and eco-lodges near Kanha's most popular entrance</p>
+    <section class="relative h-screen flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/7245535/pexels-photo-7245535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                 alt="Kanha National Park landscape" 
+                 class="w-full h-full object-cover"
+                 loading="lazy">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Top 10 Resorts in Kanha National Park (Khatia Gate)
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200">
+                Your ultimate guide to luxury stays and eco-lodges near Kanha's most popular entrance
+            </p>
         </div>
     </section>
 
     <!-- Introduction Section -->
-    <section class="container fade-in">
-        <div class="intro-section">
-            <h2>Welcome to Kanha National Park</h2>
-            <p>Nestled in the heart of Madhya Pradesh, Kanha National Park is one of India's largest and most well-preserved tiger reserves. The Khatia Gate serves as the primary entrance to this natural paradise, offering visitors the perfect base to explore the park's diverse wildlife and stunning landscapes.</p>
-            <p>In this comprehensive guide, we'll explore the top 10 resorts near Khatia Gate, each offering unique experiences while maintaining the highest standards of comfort and service.</p>
+    <section class="py-16 bg-background">
+        <div class="max-w-4xl mx-auto px-4 reveal">
+            <h2 class="text-4xl font-bold text-primary mb-8 text-center">Welcome to Kanha National Park</h2>
+            <div class="prose prose-lg mx-auto">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Nestled in the heart of Madhya Pradesh, Kanha National Park is one of India's largest and most well-preserved tiger reserves. The Khatia Gate serves as the primary entrance to this natural paradise, offering visitors the perfect base to explore the park's diverse wildlife and stunning landscapes.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    In this comprehensive guide, we'll explore the top 10 resorts near Khatia Gate, each offering unique experiences while maintaining the highest standards of comfort and service.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -104,18 +139,46 @@
     <section class="container">
         <div class="resort-grid">
             <!-- Kanha Earth Lodge -->
-            <article class="resort-card fade-in">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Kanha Earth Lodge" class="resort-image" loading="lazy">
-                <div class="resort-content">
-                    <h2>1. Kanha Earth Lodge</h2>
-                    <p>An eco-friendly haven nestled in 16 acres of natural forest. This sustainably designed lodge offers a perfect blend of luxury and conservation, making it ideal for the environmentally conscious traveler.</p>
-                    <ul class="resort-highlights">
-                        <li>12 sustainable bungalows</li>
-                        <li>Farm-to-table dining</li>
-                        <li>Nature walks and bird watching</li>
-                        <li>Expert naturalist guides</li>
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl reveal">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                         alt="Kanha Earth Lodge" 
+                         class="w-full h-64 object-cover"
+                         loading="lazy">
+                    <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Featured
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4">1. Kanha Earth Lodge</h2>
+                    <p class="text-gray-600 mb-6">An eco-friendly haven nestled in 16 acres of natural forest. This sustainably designed lodge offers a perfect blend of luxury and conservation, making it ideal for the environmentally conscious traveler.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            12 sustainable bungalows
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Farm-to-table dining
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Nature walks and bird watching
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Expert naturalist guides
+                        </li>
                     </ul>
-                    <p class="price-range">₹15,000 - ₹25,000 per night</p>
+                    <p class="text-xl font-semibold text-primary">₹15,000 - ₹25,000 per night</p>
                 </div>
             </article>
 
